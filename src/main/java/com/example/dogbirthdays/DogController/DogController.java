@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 import com.example.dogbirthdays.entity.Dog;
 import com.example.dogbirthdays.repository.DogRepository;
+
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,6 +47,13 @@ public class DogController {
                 .orElseGet(() -> {
                     return DOGS.save(updatedDog);
                 });
+        return DOGS.findById(id);
+    }
+
+    @CrossOrigin
+    @DeleteMapping("/{id}")
+    public Optional<Dog> deleteDog(@PathVariable int id){
+        DOGS.deleteById(id);
         return DOGS.findById(id);
     }
 
