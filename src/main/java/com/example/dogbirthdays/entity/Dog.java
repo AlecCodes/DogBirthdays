@@ -21,12 +21,12 @@ public class Dog {
 
     public String get_name(){return name;}
 
-    private LocalDate get_birthday(){return birthday;}
+    public LocalDate get_birthday(){return birthday;}
 
-    private void set_id(int dog_id){this.dog_id = dog_id;}
+    public void set_id(int dog_id){this.dog_id = dog_id;}
 
-    private void set_name(String name){this.name = name;}
+    public void set_name(String name){this.name = name;}
 
-    private void set_birthday(LocalDate birthday){this.birthday = birthday; }
+    public void set_birthday(LocalDate birthday){this.birthday = birthday; }
 
 }
